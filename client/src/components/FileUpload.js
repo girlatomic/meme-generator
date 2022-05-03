@@ -13,11 +13,41 @@ const FileUpload = () => {
     setFilename(e.target.files[0].name);
   };
 
+  // async function uploadFile(formData) {
+  //   try {
+  //     const res = await axios.post("/upload", formData, {
+  //       headers: {
+  //         "Content-Type": "multipart/form-data",
+  //       },
+  //     });
+
+  //     const { fileName, filePath } = res.data;
+  //     console.log("dat", res.data);
+
+  //     setUploadedFile({ fileName, filePath });
+  //   } catch (err) {
+  //     if (err.response.status === 500) {
+  //       setMessage("There was a problem with the server");
+  //     } else {
+  //       setMessage(err.response.data.msg);
+  //     }
+  //   }
+  // }
+
+  // const onSubmit = (e) => {
+  //   e.preventDefault();
+  //   const formData = new FormData();
+  //   formData.append("file", file);
+  //   uploadFile(formData);
+
+  //   setFile(null);
+  //   e.target.reset();
+  // };
+
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("file", file);
-
     try {
       const res = await axios.post("/upload", formData, {
         headers: {
@@ -25,9 +55,13 @@ const FileUpload = () => {
         },
       });
 
+      // Clear percentage
+
       const { fileName, filePath } = res.data;
 
       setUploadedFile({ fileName, filePath });
+
+      setMessage("File Uploaded");
     } catch (err) {
       if (err.response.status === 500) {
         setMessage("There was a problem with the server");
@@ -60,13 +94,14 @@ const FileUpload = () => {
           </button>
         </div>
       </form>
-      {uploadedFile ? (
+      {uploadedFile && (
         <div className="row mt-5">
           <div className="col-md-6 m-auto">
+            <h3>{uploadedFile.fileName}</h3>
             <img style={{ width: "100%" }} src={uploadedFile.filePath} alt="" />
           </div>
         </div>
-      ) : null}
+      )}
     </Fragment>
   );
 };
