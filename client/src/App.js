@@ -1,13 +1,16 @@
 import React from "react";
 import "./App.css";
 import FileUpload from "./components/FileUpload";
+import NavBar from "./components/NavBar";
 
 const App = () => (
-  <div className="container mt-4">
-    <h4 className="display-4 text-center mb-4">
-      <i className="fab fa-react" /> Create your meme!
-    </h4>
-    <FileUpload />
+  <div>
+    <div>
+      <NavBar />
+    </div>
+    <div className="container mt-4">
+      <FileUpload />
+    </div>
   </div>
 );
 
