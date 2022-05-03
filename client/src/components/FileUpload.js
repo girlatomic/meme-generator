@@ -32,7 +32,7 @@ const FileUpload = () => {
         },
       });
 
-      setTimeout(() => setUploadPercentage(0), 10000);
+      setTimeout(() => setUploadPercentage(0), 1200);
 
       const { fileName, filePath } = res.data;
 
@@ -56,33 +56,6 @@ const FileUpload = () => {
     setFile(null);
     e.target.reset();
   };
-
-  // const onSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const formData = new FormData();
-  //   formData.append("file", file);
-  //   try {
-  //     const res = await axios.post("/upload", formData, {
-  //       headers: {
-  //         "Content-Type": "multipart/form-data",
-  //       },
-  //     });
-
-  //     // Clear percentage
-
-  //     const { fileName, filePath } = res.data;
-
-  //     setUploadedFile({ fileName, filePath });
-
-  //     setMessage("File Uploaded");
-  //   } catch (err) {
-  //     if (err.response.status === 500) {
-  //       setMessage("There was a problem with the server");
-  //     } else {
-  //       setMessage(err.response.data.msg);
-  //     }
-  //   }
-  // };
 
   return (
     <Fragment>
