@@ -7,16 +7,14 @@ import EditForm from "./components/EditForm";
 import Meme from "./components/Meme";
 
 const App = () => {
-  // const [file, setFile] = useState("");
   const [uploadedFile, setUploadedFile] = useState({});
-
-  const [topTextN, setTopTextN] = useState("Top Text");
+  const [topText, setTopText] = useState("Top Text");
   const [bottomText, setBottomText] = useState("Bottom Text");
   const [selectedColor, setSelectedColor] = useState("#FFFFFF");
   const [activeFontFamily, setActiveFontFamily] = useState("Oswald");
 
-  function onChangeTxt(newValue) {
-    setTopTextN(newValue);
+  function onChangeTop(newValue) {
+    setTopText(newValue);
   }
 
   function onChangeBottom(newValue) {
@@ -63,7 +61,7 @@ const App = () => {
             <h2>Preview </h2>
             <Meme
               uploadedFile={uploadedFile}
-              topTextN={topTextN}
+              topText={topText}
               bottomText={bottomText}
               selectedColor={selectedColor}
             />
@@ -73,8 +71,8 @@ const App = () => {
             <FileUpload uploadFile={(fd) => uploadFile(fd)} />
             <h2>Step 2: Edit your image </h2>
             <EditForm
-              onChangeTxt={(nv) => onChangeTxt(nv)}
-              topTextN={topTextN}
+              onChangeTop={(nv) => onChangeTop(nv)}
+              topText={topText}
               bottomText={bottomText}
               selectedColor={selectedColor}
               onChangeBottom={(nv) => onChangeBottom(nv)}

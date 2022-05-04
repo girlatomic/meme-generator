@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import FontPicker from "font-picker-react";
 
 export default function EditForm({
-  onChangeTxt,
+  onChangeTop,
   onChangeBottom,
   colorChange,
-  topTextN,
+  topText,
   bottomText,
   selectedColor,
   handleFontChange,
@@ -33,18 +33,18 @@ export default function EditForm({
       <form>
         <div className="row">
           <div className="input-field">
+            <label htmlFor="top_text">Top Text</label>
             <input
               className="form-control"
               type="text"
               id="top_text"
               name="top_text"
-              value={topTextN}
-              onChange={(e) => onChangeTxt(e.target.value)}
-              placeholder="top input"
+              value={topText}
+              onChange={(e) => onChangeTop(e.target.value)}
             />
-            <label htmlFor="top_text">Top Text</label>
           </div>
           <div className="input-field">
+            <label htmlFor="bottom_text">Bottom Text</label>
             <input
               className="form-control"
               type="text"
@@ -53,9 +53,11 @@ export default function EditForm({
               value={bottomText}
               onChange={(e) => onChangeBottom(e.target.value)}
             />
-            <label htmlFor="bottom_text">Bottom Text</label>
           </div>
           <div>
+            <label htmlFor="ColorInput" className="form-label">
+              Color picker
+            </label>
             <input
               type="color"
               className="form-control form-control-color"
@@ -64,15 +66,16 @@ export default function EditForm({
               onChange={(e) => colorChange(e.target.value)}
               title="Choose your color"
             />
-            <label htmlFor="exampleColorInput" className="form-label">
-              Color picker
-            </label>
           </div>
           <div>
+            <label htmlFor="FontInput" className="form-label">
+              Choose a font
+            </label>
             <FontPicker
               apiKey="AIzaSyAo9NRLxexTahY-O8I8GWicDHBZL_Tbnhw"
               activeFontFamily={activeFontFamily}
               onChange={handleFontChange}
+              className="form-control form-control-color"
             />
           </div>
         </div>

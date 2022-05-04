@@ -4,7 +4,7 @@ import "./Meme.css";
 
 export default function Meme({
   uploadedFile,
-  topTextN,
+  topText,
   bottomText,
   selectedColor,
 }) {
@@ -13,7 +13,7 @@ export default function Meme({
       <div className="meme">
         <img src={uploadedFile.filePath} />
         <h4 className="apply-font" id="top" style={{ color: selectedColor }}>
-          {topTextN}
+          {topText}
         </h4>
         <h4 className="apply-font" id="bottom" style={{ color: selectedColor }}>
           {bottomText}
