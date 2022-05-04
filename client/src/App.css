@@ -10,3 +10,8 @@
 .navbar img {
   width: 20%;
 }
+
+.thumbnail {
+  position: relative;
+  outline: #7f00ff 1px;
+}
