@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-export default function EditForm({ onChangeTxt }) {
-  const [topText, setTopText] = useState("");
-  const [bottomText, setBottomText] = useState("");
+export default function EditForm({
+  onChangeTxt,
+  onChangeBottom,
+  topTextN,
+  bottomText,
+}) {
+  // const [topText, setTopText] = useState("");
+  // const [bottomText, setBottomText] = useState("");
   const [selectedColor, setSelectedColor] = useState("#FFFFFF");
 
   // const handleChange = (e) => {
@@ -28,7 +33,7 @@ export default function EditForm({ onChangeTxt }) {
               type="text"
               id="top_text"
               name="top_text"
-              // value=""
+              value={topTextN}
               onChange={(e) => onChangeTxt(e.target.value)}
               placeholder="top input"
             />
@@ -41,7 +46,7 @@ export default function EditForm({ onChangeTxt }) {
               name="bottom_text"
               id="bottom_text"
               value={bottomText}
-              // onChange={handleChange}
+              onChange={(e) => onChangeBottom(e.target.value)}
             />
             <label htmlFor="bottom_text">Bottom Text</label>
           </div>

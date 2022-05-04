@@ -11,9 +11,14 @@ const App = () => {
   const [uploadedFile, setUploadedFile] = useState({});
 
   const [topTextN, setTopTextN] = useState("Top Text");
+  const [bottomText, setBottomText] = useState("Bottom Text");
 
   function onChangeTxt(newValue) {
     setTopTextN(newValue);
+  }
+
+  function onChangeBottom(newValue) {
+    setBottomText(newValue);
   }
 
   async function uploadFile(formData) {
@@ -48,13 +53,22 @@ const App = () => {
         <div className="row g-5">
           <div className="col-md">
             <h2>Preview </h2>
-            <Meme uploadedFile={uploadedFile} topTextN={topTextN} />
+            <Meme
+              uploadedFile={uploadedFile}
+              topTextN={topTextN}
+              bottomText={bottomText}
+            />
           </div>
           <div className="col-md">
             <h2>Step 1: Upload your image </h2>
             <FileUpload uploadFile={(fd) => uploadFile(fd)} />
             <h2>Step 2: Edit your image </h2>
-            <EditForm onChangeTxt={(nv) => onChangeTxt(nv)} />
+            <EditForm
+              onChangeTxt={(nv) => onChangeTxt(nv)}
+              topTextN={topTextN}
+              bottomText={bottomText}
+              onChangeBottom={(nv) => onChangeBottom(nv)}
+            />
           </div>
         </div>
       </div>
