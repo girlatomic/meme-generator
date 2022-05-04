@@ -7,12 +7,12 @@ import EditForm from "./components/EditForm";
 import Meme from "./components/Meme";
 
 const App = () => {
-  const [file, setFile] = useState("");
+  // const [file, setFile] = useState("");
   const [uploadedFile, setUploadedFile] = useState({});
 
-  async function uploadFile() {
-    const formData = new FormData();
-    formData.append("file", file);
+  async function uploadFile(formData) {
+    // const formData = new FormData();
+    // formData.append("file", file);
     try {
       const res = await axios.post("/upload", formData, {
         headers: {
@@ -42,11 +42,11 @@ const App = () => {
         <div className="row g-5">
           <div className="col-md">
             <h2>Preview </h2>
-            <Meme />
+            <Meme uploadedFile={uploadedFile} />
           </div>
           <div className="col-md">
             <h2>Step 1: Upload your image </h2>
-            <FileUpload uploadFile={uploadFile} />
+            <FileUpload uploadFile={(fd) => uploadFile(fd)} />
             <h2>Step 2: Edit your image </h2>
             <EditForm />
           </div>

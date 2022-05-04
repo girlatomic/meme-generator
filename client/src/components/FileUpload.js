@@ -51,7 +51,9 @@ const FileUpload = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    props.uploadFile();
+    const formData = new FormData();
+    formData.append("file", file);
+    props.uploadFile(formData);
 
     setFile(null);
     e.target.reset();
@@ -86,8 +88,8 @@ const FileUpload = (props) => {
           <div className="col-md-6 m-auto">
             <img style={{ width: "100%" }} src={uploadedFile.filePath} alt="" />
           </div>
-        </div> */}
-      )}
+        </div>
+      )} */}
     </Fragment>
   );
 };
