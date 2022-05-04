@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 export default function EditForm({
   onChangeTxt,
   onChangeBottom,
+  colorChange,
   topTextN,
   bottomText,
+  selectedColor,
 }) {
   // const [topText, setTopText] = useState("");
   // const [bottomText, setBottomText] = useState("");
-  const [selectedColor, setSelectedColor] = useState("#FFFFFF");
+  // const [selectedColor, setSelectedColor] = useState("#FFFFFF");
 
   // const handleChange = (e) => {
   //   if (e.target.name === "top_text") setTopText(e.target.value);
@@ -19,9 +21,9 @@ export default function EditForm({
   //     setActiveFontFamily(nextFont.family);
   //   };
 
-  const handleColorChange = (e) => {
-    setSelectedColor(e.target.value);
-  };
+  // const handleColorChange = (e) => {
+  //   setSelectedColor(e.target.value);
+  // };
 
   return (
     <div>
@@ -56,7 +58,7 @@ export default function EditForm({
               className="form-control form-control-color"
               id="exampleColorInput"
               value={selectedColor}
-              onChange={handleColorChange}
+              onChange={(e) => colorChange(e.target.value)}
               title="Choose your color"
             />
             <label htmlFor="exampleColorInput" className="form-label">

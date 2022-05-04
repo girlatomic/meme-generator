@@ -12,6 +12,7 @@ const App = () => {
 
   const [topTextN, setTopTextN] = useState("Top Text");
   const [bottomText, setBottomText] = useState("Bottom Text");
+  const [selectedColor, setSelectedColor] = useState("#FFFFFF");
 
   function onChangeTxt(newValue) {
     setTopTextN(newValue);
@@ -19,6 +20,10 @@ const App = () => {
 
   function onChangeBottom(newValue) {
     setBottomText(newValue);
+  }
+
+  function colorChange(newValue) {
+    setSelectedColor(newValue);
   }
 
   async function uploadFile(formData) {
@@ -57,6 +62,7 @@ const App = () => {
               uploadedFile={uploadedFile}
               topTextN={topTextN}
               bottomText={bottomText}
+              selectedColor={selectedColor}
             />
           </div>
           <div className="col-md">
@@ -67,7 +73,9 @@ const App = () => {
               onChangeTxt={(nv) => onChangeTxt(nv)}
               topTextN={topTextN}
               bottomText={bottomText}
+              selectedColor={selectedColor}
               onChangeBottom={(nv) => onChangeBottom(nv)}
+              colorChange={(nv) => colorChange(nv)}
             />
           </div>
         </div>
