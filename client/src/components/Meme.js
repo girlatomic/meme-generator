@@ -1,5 +1,6 @@
 import React from "react";
 import placeholder from "../images/placeholder.jpeg";
+import "./Meme.css";
 
 export default function Meme({
   uploadedFile,
@@ -9,16 +10,14 @@ export default function Meme({
 }) {
   return (
     <div>
-      <div className="card bg-dark text-white">
-        <img src={uploadedFile.filePath} className="card-img" alt="..." />
-        <div className="card-img-overlay">
-          <h5 className="card-title" style={{ color: selectedColor }}>
-            {topTextN}
-          </h5>
-          <h5 className="card-footer" style={{ color: selectedColor }}>
-            {bottomText}
-          </h5>
-        </div>
+      <div className="meme">
+        <img src={uploadedFile.filePath} alt="..." />
+        <h4 id="top" style={{ color: selectedColor }}>
+          {topTextN}
+        </h4>
+        <h4 id="bottom" style={{ color: selectedColor }}>
+          {bottomText}
+        </h4>
       </div>
     </div>
   );
