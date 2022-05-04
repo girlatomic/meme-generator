@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function EditForm() {
+export default function EditForm({ onChangeTxt }) {
   const [topText, setTopText] = useState("");
   const [bottomText, setBottomText] = useState("");
   const [selectedColor, setSelectedColor] = useState("#FFFFFF");
 
-  const handleChange = (e) => {
-    if (e.target.name === "top_text") setTopText(e.target.value);
-    else setBottomText(e.target.value);
-  };
+  // const handleChange = (e) => {
+  //   if (e.target.name === "top_text") setTopText(e.target.value);
+  //   else setBottomText(e.target.value);
+  // };
 
   //   const handleFontChange = (nextFont) => {
   //     setActiveFontFamily(nextFont.family);
@@ -28,8 +28,8 @@ export default function EditForm() {
               type="text"
               id="top_text"
               name="top_text"
-              value={topText}
-              onChange={handleChange}
+              // value=""
+              onChange={(e) => onChangeTxt(e.target.value)}
               placeholder="top input"
             />
             <label htmlFor="top_text">Top Text</label>
@@ -41,7 +41,7 @@ export default function EditForm() {
               name="bottom_text"
               id="bottom_text"
               value={bottomText}
-              onChange={handleChange}
+              // onChange={handleChange}
             />
             <label htmlFor="bottom_text">Bottom Text</label>
           </div>
