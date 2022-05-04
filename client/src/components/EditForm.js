@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import FontPicker from "font-picker-react";
 
 export default function EditForm({
   onChangeTxt,
@@ -7,6 +8,8 @@ export default function EditForm({
   topTextN,
   bottomText,
   selectedColor,
+  handleFontChange,
+  activeFontFamily,
 }) {
   // const [topText, setTopText] = useState("");
   // const [bottomText, setBottomText] = useState("");
@@ -65,13 +68,13 @@ export default function EditForm({
               Color picker
             </label>
           </div>
-          {/* <div>
+          <div>
             <FontPicker
               apiKey="AIzaSyAo9NRLxexTahY-O8I8GWicDHBZL_Tbnhw"
               activeFontFamily={activeFontFamily}
               onChange={handleFontChange}
             />
-          </div> */}
+          </div>
         </div>
       </form>
     </div>

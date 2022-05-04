@@ -11,11 +11,11 @@ export default function Meme({
   return (
     <div>
       <div className="meme">
-        <img src={uploadedFile.filePath} alt="..." />
-        <h4 id="top" style={{ color: selectedColor }}>
+        <img src={uploadedFile.filePath} />
+        <h4 className="apply-font" id="top" style={{ color: selectedColor }}>
           {topTextN}
         </h4>
-        <h4 id="bottom" style={{ color: selectedColor }}>
+        <h4 className="apply-font" id="bottom" style={{ color: selectedColor }}>
           {bottomText}
         </h4>
       </div>

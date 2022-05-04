@@ -13,6 +13,7 @@ const App = () => {
   const [topTextN, setTopTextN] = useState("Top Text");
   const [bottomText, setBottomText] = useState("Bottom Text");
   const [selectedColor, setSelectedColor] = useState("#FFFFFF");
+  const [activeFontFamily, setActiveFontFamily] = useState("Oswald");
 
   function onChangeTxt(newValue) {
     setTopTextN(newValue);
@@ -26,9 +27,11 @@ const App = () => {
     setSelectedColor(newValue);
   }
 
+  function handleFontChange(nextFont) {
+    setActiveFontFamily(nextFont.family);
+  }
+
   async function uploadFile(formData) {
-    // const formData = new FormData();
-    // formData.append("file", file);
     try {
       const res = await axios.post("/upload", formData, {
         headers: {
@@ -76,6 +79,8 @@ const App = () => {
               selectedColor={selectedColor}
               onChangeBottom={(nv) => onChangeBottom(nv)}
               colorChange={(nv) => colorChange(nv)}
+              handleFontChange={(nv) => handleFontChange(nv)}
+              activeFontFamily={activeFontFamily}
             />
           </div>
         </div>
