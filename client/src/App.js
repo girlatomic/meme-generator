@@ -5,6 +5,8 @@ import FileUpload from "./components/FileUpload";
 import NavBar from "./components/NavBar";
 import EditForm from "./components/EditForm";
 import Meme from "./components/Meme";
+import Progress from "./components/Progress";
+import Message from "./components/Message";
 
 const App = () => {
   const [uploadedFile, setUploadedFile] = useState({});
@@ -12,6 +14,8 @@ const App = () => {
   const [bottomText, setBottomText] = useState("Bottom Text");
   const [selectedColor, setSelectedColor] = useState("#FBFF0A");
   const [activeFontFamily, setActiveFontFamily] = useState("Oswald");
+  const [message, setMessage] = useState("");
+  const [uploadPercentage, setUploadPercentage] = useState(0);
 
   function onChangeTop(newValue) {
     setTopText(newValue);
@@ -35,19 +39,28 @@ const App = () => {
         headers: {
           "Content-Type": "multipart/form-data",
         },
+        onUploadProgress: (progressEvent) => {
+          setUploadPercentage(
+            parseInt(
+              Math.round((progressEvent.loaded * 100) / progressEvent.total)
+            )
+          );
+        },
       });
+      setTimeout(() => setUploadPercentage(0), 1200);
 
       const { fileName, filePath } = res.data;
 
       setUploadedFile({ fileName, filePath });
 
-      console.log("File Uploaded");
+      setMessage("File Uploaded");
     } catch (err) {
       if (err.response.status === 500) {
-        console.log("There was a problem with the server");
+        setMessage("There was a problem with the server");
       } else {
-        console.log(err.response.data.msg);
+        setMessage(err.response.data.msg);
       }
+      setUploadPercentage(0);
     }
   }
   return (
@@ -71,7 +84,9 @@ const App = () => {
           <div className="sidebar col-md">
             <div className="container">
               <h2>Step 1: Upload your image </h2>
+              {message ? <Message msg={message} /> : null}
               <FileUpload uploadFile={(fd) => uploadFile(fd)} />
+              <Progress percentage={uploadPercentage} />
               <h2>Step 2: Edit your image </h2>
               <EditForm
                 onChangeTop={(nv) => onChangeTop(nv)}

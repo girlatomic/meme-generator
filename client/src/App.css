@@ -61,7 +61,6 @@ li:focus {
 }
 
 .btn-primary {
-  /* outline: solid white 1px; */
   background: linear-gradient(
     90deg,
     rgba(93, 12, 255, 1) 0%,

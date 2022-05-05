@@ -61,9 +61,8 @@ const FileUpload = (props) => {
 
   return (
     <Fragment>
-      {/* {message ? <Message msg={message} /> : null} */}
       <form onSubmit={onSubmit}>
-        <div className="input-group mb-5 ">
+        <div className="input-group mb-3">
           <input
             type="file"
             className="form-control border border-primary bg-transparent text-white"
@@ -81,15 +80,7 @@ const FileUpload = (props) => {
             Upload
           </button>
         </div>
-        {/* <Progress percentage={uploadPercentage} /> */}
       </form>
-      {/* {uploadedFile && (
-        <div className="row mt-5">
-          <div className="col-md-6 m-auto">
-            <img style={{ width: "100%" }} src={uploadedFile.filePath} alt="" />
-          </div>
-        </div>
-      )} */}
     </Fragment>
   );
 };
