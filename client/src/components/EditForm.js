@@ -35,7 +35,7 @@ export default function EditForm({
           <div className="input-field">
             <label htmlFor="top_text">Top Text</label>
             <input
-              className="form-control"
+              className="form-control border border-primary bg-transparent text-white"
               type="text"
               id="top_text"
               name="top_text"
@@ -46,7 +46,7 @@ export default function EditForm({
           <div className="input-field">
             <label htmlFor="bottom_text">Bottom Text</label>
             <input
-              className="form-control"
+              className="form-control border border-primary bg-transparent text-white"
               type="text"
               name="bottom_text"
               id="bottom_text"
@@ -60,7 +60,7 @@ export default function EditForm({
             </label>
             <input
               type="color"
-              className="form-control form-control-color"
+              className="form-control form-control-color border border-primary bg-transparent"
               id="exampleColorInput"
               value={selectedColor}
               onChange={(e) => colorChange(e.target.value)}
@@ -75,7 +75,6 @@ export default function EditForm({
               apiKey="AIzaSyAo9NRLxexTahY-O8I8GWicDHBZL_Tbnhw"
               activeFontFamily={activeFontFamily}
               onChange={handleFontChange}
-              className="form-control form-control-color"
             />
           </div>
         </div>

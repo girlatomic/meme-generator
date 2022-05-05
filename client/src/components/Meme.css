@@ -1,6 +1,6 @@
 .meme {
   position: relative;
-  width: 500px;
+  width: 100%;
   height: 500px;
   border: 1px dashed rgb(142, 152, 230);
   border-radius: 10px;

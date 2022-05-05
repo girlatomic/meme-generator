@@ -63,10 +63,10 @@ const FileUpload = (props) => {
     <Fragment>
       {/* {message ? <Message msg={message} /> : null} */}
       <form onSubmit={onSubmit}>
-        <div className="input-group mb-2">
+        <div className="input-group mb-5 ">
           <input
             type="file"
-            className="form-control"
+            className="form-control border border-primary bg-transparent text-white"
             id="inputGroupFile04"
             aria-describedby="inputGroupFileAddon04"
             aria-label="Upload"

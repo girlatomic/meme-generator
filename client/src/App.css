@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(18, 17, 17);
+  color: rgb(189, 189, 189);
+}
 .navbar {
   background: linear-gradient(90deg, #7f00ff, #e100ff 100%);
   color: #fff;
@@ -14,4 +18,58 @@
 .thumbnail {
   position: relative;
   outline: #7f00ff 1px;
+}
+
+.sidebar {
+  background-color: rgba(38, 38, 38, 0.516);
+  height: 95vh;
+  margin: 0;
+  padding-top: 50px;
+}
+
+#font-picker {
+  display: flex;
+}
+
+.dropdown-button {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  color: rgb(255, 253, 253);
+  background: rgb(38, 38, 38) !important;
+  border: 1px solid #0d6efd !important;
+}
+
+ul {
+  border-radius: 5px;
+  background: rgb(43, 43, 43) !important;
+  width: 100%;
+}
+
+li {
+  /* background-color: rgba(38, 38, 38, 0.516); */
+  color: #fff;
+}
+
+li:hover,
+li:focus {
+  color: rgb(43, 39, 39) !important;
+  border: 1px solid #0d6efd;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  /* outline: solid white 1px; */
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+}
+
+.btn-primary:hover {
+  background: #b1b122;
+  color: white;
 }

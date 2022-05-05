@@ -10,7 +10,7 @@ const App = () => {
   const [uploadedFile, setUploadedFile] = useState({});
   const [topText, setTopText] = useState("Top Text");
   const [bottomText, setBottomText] = useState("Bottom Text");
-  const [selectedColor, setSelectedColor] = useState("#FFFFFF");
+  const [selectedColor, setSelectedColor] = useState("#FBFF0A");
   const [activeFontFamily, setActiveFontFamily] = useState("Oswald");
 
   function onChangeTop(newValue) {
@@ -55,31 +55,35 @@ const App = () => {
       <div>
         <NavBar />
       </div>
-      <div className="container mt-4">
+      <div className="container-fluid mt-4">
         <div className="row g-5">
           <div className="col-md">
-            <h2>Preview </h2>
-            <Meme
-              uploadedFile={uploadedFile}
-              topText={topText}
-              bottomText={bottomText}
-              selectedColor={selectedColor}
-            />
+            <div className="container">
+              <h2>Preview </h2>
+              <Meme
+                uploadedFile={uploadedFile}
+                topText={topText}
+                bottomText={bottomText}
+                selectedColor={selectedColor}
+              />
+            </div>
           </div>
-          <div className="col-md">
-            <h2>Step 1: Upload your image </h2>
-            <FileUpload uploadFile={(fd) => uploadFile(fd)} />
-            <h2>Step 2: Edit your image </h2>
-            <EditForm
-              onChangeTop={(nv) => onChangeTop(nv)}
-              topText={topText}
-              bottomText={bottomText}
-              selectedColor={selectedColor}
-              onChangeBottom={(nv) => onChangeBottom(nv)}
-              colorChange={(nv) => colorChange(nv)}
-              handleFontChange={(nv) => handleFontChange(nv)}
-              activeFontFamily={activeFontFamily}
-            />
+          <div className="sidebar col-md">
+            <div className="container">
+              <h2>Step 1: Upload your image </h2>
+              <FileUpload uploadFile={(fd) => uploadFile(fd)} />
+              <h2>Step 2: Edit your image </h2>
+              <EditForm
+                onChangeTop={(nv) => onChangeTop(nv)}
+                topText={topText}
+                bottomText={bottomText}
+                selectedColor={selectedColor}
+                onChangeBottom={(nv) => onChangeBottom(nv)}
+                colorChange={(nv) => colorChange(nv)}
+                handleFontChange={(nv) => handleFontChange(nv)}
+                activeFontFamily={activeFontFamily}
+              />
+            </div>
           </div>
         </div>
       </div>
