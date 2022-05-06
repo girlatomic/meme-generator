@@ -57,7 +57,7 @@ export default function EditForm({
               Choose a font
             </label>
             <FontPicker
-              apiKey="AIzaSyAo9NRLxexTahY-O8I8GWicDHBZL_Tbnhw"
+              apiKey="AIzaSyA_dVYuVwZaOJRuT2j96qctWFX3NbyeRTg"
               activeFontFamily={activeFontFamily}
               onChange={handleFontChange}
             />
