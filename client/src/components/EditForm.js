@@ -32,10 +32,12 @@ export default function EditForm({
     <div>
       <form>
         <div className="row">
-          <div className="input-field">
-            <label htmlFor="top_text">Top Text</label>
+          <div className="input-field mt-3">
+            <label className="mb-2" htmlFor="top_text">
+              Enter your text
+            </label>
             <input
-              className="form-control border border-primary bg-transparent text-white"
+              className="form-control border border-primary bg-transparent text-white-50 mb-2"
               type="text"
               id="top_text"
               name="top_text"
@@ -43,10 +45,9 @@ export default function EditForm({
               onChange={(e) => onChangeTop(e.target.value)}
             />
           </div>
-          <div className="input-field">
-            <label htmlFor="bottom_text">Bottom Text</label>
+          <div className="input-field mb-3">
             <input
-              className="form-control border border-primary bg-transparent text-white"
+              className="form-control border border-primary bg-transparent text-white-50"
               type="text"
               name="bottom_text"
               id="bottom_text"
@@ -56,11 +57,11 @@ export default function EditForm({
           </div>
           <div>
             <label htmlFor="ColorInput" className="form-label">
-              Color picker
+              Choose a color
             </label>
             <input
               type="color"
-              className="form-control form-control-color border border-primary bg-transparent"
+              className="form-control form-control-color border border-primary bg-transparent mb-3"
               id="exampleColorInput"
               value={selectedColor}
               onChange={(e) => colorChange(e.target.value)}

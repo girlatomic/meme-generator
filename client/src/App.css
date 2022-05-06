@@ -1,6 +1,7 @@
 body {
   background-color: rgb(18, 17, 17);
-  color: rgb(189, 189, 189);
+  color: rgb(171, 170, 170);
+  font-family: Inter;
 }
 .navbar {
   background: linear-gradient(90deg, #7f00ff, #e100ff 100%);
@@ -37,7 +38,6 @@ body {
   min-width: 160px;
   z-index: 1;
   border-radius: 5px;
-  color: rgb(255, 253, 253);
   background: rgb(38, 38, 38) !important;
   border: 1px solid #0d6efd !important;
 }
@@ -71,4 +71,8 @@ li:focus {
 .btn-primary:hover {
   background: #b1b122;
   color: white;
+}
+
+h2 {
+  color: rgb(177, 176, 176);
 }

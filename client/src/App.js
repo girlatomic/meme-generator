@@ -72,7 +72,9 @@ const App = () => {
         <div className="row g-5">
           <div className="col-md">
             <div className="container">
-              <h2>Preview </h2>
+              <h2>
+                <i class="fa-regular fa-eye"></i> Preview{" "}
+              </h2>
               <Meme
                 uploadedFile={uploadedFile}
                 topText={topText}
@@ -83,11 +85,17 @@ const App = () => {
           </div>
           <div className="sidebar col-md">
             <div className="container">
-              <h2>Step 1: Upload your image </h2>
+              <h2>
+                <i class="fa-regular fa-image"></i> Upload your image
+              </h2>
               {message ? <Message msg={message} /> : null}
               <FileUpload uploadFile={(fd) => uploadFile(fd)} />
               <Progress percentage={uploadPercentage} />
-              <h2>Step 2: Edit your image </h2>
+              <hr></hr>
+              <h2>
+                <i className="fa-solid fa-pen-to-square"></i> Edit your meme
+              </h2>
+
               <EditForm
                 onChangeTop={(nv) => onChangeTop(nv)}
                 topText={topText}

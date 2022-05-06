@@ -29,12 +29,12 @@ export default function Meme({
         </h4>
       </div>
       <button
-        className="btn btn-primary"
+        className="btn btn-primary mt-3"
         type="submit"
         value="Save"
         onClick={handleDownload}
       >
-        Download Meme
+        <i class="fa-solid fa-download"></i> Download Meme
       </button>
     </div>
   );

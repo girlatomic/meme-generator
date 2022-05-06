@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 const Progress = ({ percentage }) => {
   return (
-    <div className="progress mb-3">
+    <div className="progress mb-3 bg-transparent" style={{ height: "10px" }}>
       <div
-        className="progress-bar progress-bar-striped bg-success"
+        className="progress-bar progress-bar-striped"
         role="progressbar"
         style={{ width: `${percentage}%` }}
       >
