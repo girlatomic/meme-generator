@@ -43,5 +43,6 @@ npm run dev
 
 ## Demo
 
-The app has been hosted on Heroku [here](https://gp-meme-generator.herokuapp.com/).
-![meme-generator](/public/images/meme-generator.png)
+The app has been deployed on Heroku [here](https://gp-meme-generator.herokuapp.com/).
+
+![meme-generator](/public/meme-generator.png)
