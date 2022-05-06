@@ -14,14 +14,14 @@ I chose Express / Node because I wanted to use the express-fileupload package to
 
 ## Used 3rd Party Libraries
 
-Name | Reason
---- | ---
-[Bootstrap](https://getbootstrap.com/) | Simple RWD framework for designing the front end.
-[express-fileupload](https://www.npmjs.com/package/express-fileupload) | To be able to handle file uploads.
-[Axios](https://www.npmjs.com/package/axios) | to handle the HTTP requests and file upload progress.
-[html-to-image](https://www.npmjs.com/package/html-to-image) | Generates an image from a DOM node using HTML5 canvas and SVG.
-[downloadjs](https://www.npmjs.com/package/downloadjs) | To trigger the download of the image generated from the HTML div.
-[Font Picker React](https://www.npmjs.com/package/font-picker-react) | To give users many font options with a google fonts dropdown menu (also because my moral code prohibits me from using comic sans, ever)
+| Name                                                                   | Reason                                                                                                                                  |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [Bootstrap](https://getbootstrap.com/)                                 | Simple RWD framework for designing the front end.                                                                                       |
+| [express-fileupload](https://www.npmjs.com/package/express-fileupload) | To be able to handle file uploads.                                                                                                      |
+| [Axios](https://www.npmjs.com/package/axios)                           | to handle the HTTP requests and file upload progress.                                                                                   |
+| [html-to-image](https://www.npmjs.com/package/html-to-image)           | Generates an image from a DOM node using HTML5 canvas and SVG.                                                                          |
+| [downloadjs](https://www.npmjs.com/package/downloadjs)                 | To trigger the download of the image generated from the HTML div.                                                                       |
+| [Font Picker React](https://www.npmjs.com/package/font-picker-react)   | To give users many font options with a google fonts dropdown menu (also because my moral code prohibits me from using comic sans, ever) |
 
 ## Installation / Run
 
@@ -40,4 +40,3 @@ npm install
 # Serve on localhost:3000
 npm run dev
 ```
----
