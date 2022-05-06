@@ -1,5 +1,6 @@
 import React from "react";
 import FontPicker from "font-picker-react";
+import "./EditForm.css";
 
 export default function EditForm({
   onChangeTop,
