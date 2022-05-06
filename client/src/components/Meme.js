@@ -1,5 +1,4 @@
 import React from "react";
-import placeholder from "../images/placeholder.jpeg";
 import "./Meme.css";
 import * as htmlToImage from "html-to-image";
 import download from "downloadjs";
@@ -19,7 +18,7 @@ export default function Meme({
   };
   return (
     <div>
-      <div className="meme" width="300" height="300" id="meme-download">
+      <div className="meme" id="meme-download">
         <img src={uploadedFile.filePath} />
         <h4 className="apply-font" id="top" style={{ color: selectedColor }}>
           {topText}
@@ -29,7 +28,7 @@ export default function Meme({
         </h4>
       </div>
       <button
-        className="btn btn-primary mt-3"
+        className="btn btn-primary mt-3 mb-4"
         type="submit"
         value="Save"
         onClick={handleDownload}

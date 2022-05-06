@@ -1,9 +1,12 @@
 .meme {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 60vh;
   border: 1px dashed rgb(142, 152, 230);
   border-radius: 10px;
+  background-image: url(../images/placeholder.jpeg);
+  background-position: center;
+  background-size: contain;
 }
 
 .meme > img {

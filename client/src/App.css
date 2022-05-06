@@ -16,11 +16,6 @@ body {
   width: 20%;
 }
 
-.thumbnail {
-  position: relative;
-  outline: #7f00ff 1px;
-}
-
 .sidebar {
   background-color: rgba(38, 38, 38, 0.516);
   height: 95vh;

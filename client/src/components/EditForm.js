@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import FontPicker from "font-picker-react";
 
 export default function EditForm({
@@ -11,23 +11,6 @@ export default function EditForm({
   handleFontChange,
   activeFontFamily,
 }) {
-  // const [topText, setTopText] = useState("");
-  // const [bottomText, setBottomText] = useState("");
-  // const [selectedColor, setSelectedColor] = useState("#FFFFFF");
-
-  // const handleChange = (e) => {
-  //   if (e.target.name === "top_text") setTopText(e.target.value);
-  //   else setBottomText(e.target.value);
-  // };
-
-  //   const handleFontChange = (nextFont) => {
-  //     setActiveFontFamily(nextFont.family);
-  //   };
-
-  // const handleColorChange = (e) => {
-  //   setSelectedColor(e.target.value);
-  // };
-
   return (
     <div>
       <form>
