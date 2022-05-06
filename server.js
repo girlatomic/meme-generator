@@ -1,16 +1,19 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
 const cors = require("cors");
+var path = require("path");
+const port = process.env.PORT || 5000;
 
 const app = express();
 
-app.use(express.static("public"));
 app.use(cors());
 app.use(
   fileUpload({
     createParentPath: true,
   })
 );
+
+app.use(express.static(path.join(__dirname, "/client/build")));
 
 // Upload Endpoint
 app.post("/upload", (req, res) => {
@@ -28,4 +31,10 @@ app.post("/upload", (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("Server Started..."));
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
+
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}!`);
+});
