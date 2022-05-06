@@ -40,3 +40,8 @@ npm install
 # Serve on localhost:3000
 npm run dev
 ```
+
+## Demo
+
+The app has been hosted on Heroku [here](https://gp-meme-generator.herokuapp.com/).
+![meme-generator](/public/images/meme-generator.png)
