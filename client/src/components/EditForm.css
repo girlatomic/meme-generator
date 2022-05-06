@@ -1,0 +1,35 @@
+#font-picker {
+  display: flex;
+}
+
+.dropdown-button {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  background: rgb(38, 38, 38) !important;
+  border: 1px solid #0d6efd !important;
+}
+
+ul {
+  border-radius: 5px;
+  background: rgb(43, 43, 43) !important;
+  width: 100%;
+}
+
+li {
+  /* background-color: rgba(38, 38, 38, 0.516); */
+  color: #fff;
+}
+
+li:hover,
+li:focus {
+  color: rgb(43, 39, 39) !important;
+  border: 1px solid #0d6efd;
+  border-radius: 5px;
+}
+
+label {
+  font-size: 18px;
+}

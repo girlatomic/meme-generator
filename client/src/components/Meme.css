@@ -1,0 +1,41 @@
+.meme {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  border: 1px dashed rgb(142, 152, 230);
+  border-radius: 10px;
+  background-image: url(../images/placeholder.jpeg);
+  background-position: center;
+  background-size: contain;
+}
+
+.meme > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.meme > h4 {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+#bottom {
+  bottom: 0;
+}
+
+#top {
+  top: 0;
+}
